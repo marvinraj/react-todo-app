@@ -1,9 +1,15 @@
+import TodoInput from "./components/TodoInput"
+import TodoList from "./components/TodoList"
+
 function App() {
 
+  { /*highest level parent component*/ }
   return (
-    <>
-      <div>{4 * 4}</div>
-    </>
+    <main>
+      { /*render components*/ }
+      <TodoInput />
+      <TodoList />
+    </main>
   )
 }
 
