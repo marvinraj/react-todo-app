@@ -1,4 +1,5 @@
 import React from 'react'
+import TodoCard from './TodoCard';
 
 export default function TodoList() {
   let tasks = [
@@ -10,9 +11,13 @@ export default function TodoList() {
 
   return (
     <ul className='tasks-container'>
-      {tasks.map((task, taskIndex) => 
-        <li className='task' key={taskIndex}>{task}</li>
-      )}
+      {tasks.map((task, taskIndex) => {
+        return(
+          <TodoCard key={taskIndex}>
+            <p>{task}</p>
+          </TodoCard>
+        )
+      })}
     </ul>
   )
 }
