@@ -4,7 +4,7 @@ export default function TodoInput() {
     return (
         <header>
             { /*title*/ }
-            <h2>todoist2.0</h2>
+            <h2>Yo' TodoList</h2>
 
             { /*user input and button*/ }
             <input placeholder='Enter a task...'/>

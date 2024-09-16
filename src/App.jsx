@@ -5,11 +5,11 @@ function App() {
 
   { /*highest level parent component*/ }
   return (
-    <main>
+    <>
       { /*render components*/ }
       <TodoInput />
       <TodoList />
-    </main>
+    </>
   )
 }
 
