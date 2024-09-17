@@ -12,7 +12,7 @@ export default function TodoList(props) {
       {tasks.map((task, taskIndex) => {
         return(
           // separate component for each tasks will be called here
-          <TodoCard key={taskIndex}>
+          <TodoCard {...props} key={taskIndex} index={taskIndex}>
             <p>{task}</p>
           </TodoCard>
         )

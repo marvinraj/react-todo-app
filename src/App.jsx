@@ -18,8 +18,14 @@ function App() {
   }
 
   // function to delete a task
-  function handleDeleteTask() {
-
+  // callback function in filter --> returns true (current element is included in new array),
+  // returns false (the element is excluded).
+  function handleDeleteTask(index) {
+    const newTaskList = tasks.filter((task, taskIndex) => {
+      // return true to keep the element, false otherwise
+      return taskIndex !== index
+    })
+    setTasks(newTaskList)
   }
 
   // function to edit a task
@@ -32,7 +38,7 @@ function App() {
     <>
       { /*render components*/ }
       <TodoInput handleAddTask={handleAddTask}/>
-      <TodoList tasks={tasks} />
+      <TodoList handleDeleteTask={handleDeleteTask} tasks={tasks} />
     </>
   )
 }
