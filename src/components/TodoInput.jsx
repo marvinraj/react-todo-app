@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function TodoInput() {
+export default function TodoInput(props) {
+
+    // destructure
+    const { handleAddTask } = props
+    const [taskValue, setTaskValue] = useState('')
+    
     return (
         <header>
-            { /*title*/ }
+            {/*title*/}
             <h2>Yo' TodoList</h2>
 
-            { /*user input and button*/ }
-            <input placeholder='Enter a task...'/>
-            <button type='button'>Add</button>
+            { /*user input*/ }
+            <input value={taskValue} onChange={(e) => {
+                setTaskValue(e.target.value)
+            }} placeholder='Enter a task...'/>
+
+            { /*button*/ }
+            <button onClick={() => {
+                handleAddTask(taskValue)
+            }}>Add</button>
         </header>
     )
 }

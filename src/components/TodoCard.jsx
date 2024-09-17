@@ -1,13 +1,18 @@
 import React from 'react'
 
 export default function TodoCard(props) {
-  // destructure children out of the props
+
+  // destructure task out of the props
   const { children } = props
+
   return (
+    // each task will be displayed as li
     <li className="taskItem">
+      {/*display each task*/}
       {children}
+      {/*edit & delete buttons*/}
       <div className="actionBox">
-        <p>edit & delete</p>
+        <p>edit</p>
       </div>
     </li>
   )
