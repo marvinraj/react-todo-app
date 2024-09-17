@@ -12,7 +12,8 @@ export default function TodoCard(props) {
       {children}
       {/*edit & delete buttons*/}
       <div className="actionBox">
-        <p>edit</p>
+        <button>edit</button>
+        <button>delete</button>
       </div>
     </li>
   )
