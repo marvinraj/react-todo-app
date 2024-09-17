@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 export default function TodoInput(props) {
 
     // destructure
-    const { handleAddTask } = props
-    const [taskValue, setTaskValue] = useState('')
+    const { handleAddTask, taskValue, setTaskValue } = props
+    
 
     return (
         <header>

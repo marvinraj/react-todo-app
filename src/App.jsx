@@ -10,6 +10,7 @@ function App() {
   // tasks --> current state of the list
   // setTasks --> a function that updates the state
   const [tasks, setTasks] = useState([])
+  const [taskValue, setTaskValue] = useState('')
 
   // function to add a new task
   function handleAddTask(newTask) {
@@ -29,16 +30,18 @@ function App() {
   }
 
   // function to edit a task
-  function handleEditTask() {
-
+  function handleEditTask(index) {
+    const valueToEdit = tasks[index]
+    setTaskValue(valueToEdit)
+    handleDeleteTask(index)
   }
 
   // highest level parent component
   return (
     <>
       { /*render components*/ }
-      <TodoInput handleAddTask={handleAddTask}/>
-      <TodoList handleDeleteTask={handleDeleteTask} tasks={tasks} />
+      <TodoInput taskValue={taskValue} setTaskValue={setTaskValue} handleAddTask={handleAddTask}/>
+      <TodoList handleEditTask={handleEditTask} handleDeleteTask={handleDeleteTask} tasks={tasks} />
     </>
   )
 }
