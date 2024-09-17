@@ -7,16 +7,22 @@ function App() {
   // in react, useState, as well as any other function starting with “use”, is called a Hook.
 
   // the useState hook allows us to track state in a function component.
-  const [tasks, setTasks] = useState([
-    "complete react project",
-    "brainstorm another ai coding project",
-    "go to the gym"
-  ])
+  const [tasks, setTasks] = useState([])
 
-  // function to handle adding a new task
+  // function to add a new task
   function handleAddTask(newTask) {
     const newTaskList = [...tasks, newTask]
     setTasks(newTaskList)
+  }
+
+  // function to delete a task
+  function handleDeleteTask() {
+
+  }
+
+  // function to edit a task
+  function handleEditTask() {
+    
   }
 
   // highest level parent component

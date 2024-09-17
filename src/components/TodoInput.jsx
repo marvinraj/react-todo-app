@@ -5,7 +5,7 @@ export default function TodoInput(props) {
     // destructure
     const { handleAddTask } = props
     const [taskValue, setTaskValue] = useState('')
-    
+
     return (
         <header>
             {/*title*/}
@@ -19,6 +19,7 @@ export default function TodoInput(props) {
             { /*button*/ }
             <button onClick={() => {
                 handleAddTask(taskValue)
+                setTaskValue('')
             }}>Add</button>
         </header>
     )
